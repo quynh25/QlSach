@@ -38,9 +38,9 @@ namespace QlSach.Repository
             return _context.NhaXuatBans.Where(x => x.MaNXB == id).FirstOrDefault();
         }
 
-        public ICollection<Sach> GetSachByNXB(int sachId)
+        public ICollection<Sach> GetSachByNXB(int nxbId)
         {
-            return _context.NhaXuatBans.Where(x=>x.MaNXB==sachId).Select(x=>x.Sach).ToList();
+            return _context.NhaXuatBans.Where(x=>x.MaNXB==nxbId).Select(x=>x.Sach).ToList();
 
         }
 
